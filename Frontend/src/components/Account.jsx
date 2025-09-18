@@ -7,7 +7,7 @@ function Account() {
 
     return (
         <div className='h-screen w-full flex justify-center'>
-            <div className='h-full w-full sm:w-sm flex flex-col'>
+            <div className='h-full w-full md:w-sm flex flex-col'>
                 <h2 className='bg-white p-4'>Account Settings</h2>
                 <div className=" flex-grow bg-zinc-100 shadow-md flex flex-col gap-2">
                     {/* Profile */}

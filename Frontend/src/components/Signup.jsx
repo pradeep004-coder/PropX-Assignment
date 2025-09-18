@@ -80,7 +80,7 @@ function Signup() {
 
     return (
         <div className='h-screen w-full flex justify-center'>
-            <form className='h-full w-full sm:w-sm bg-zinc-100 shadow-md p-4 flex flex-col gap-2' onSubmit={handleSubmit}>
+            <form className='h-full w-full md:w-sm bg-zinc-100 shadow-md p-4 flex flex-col gap-2' onSubmit={handleSubmit}>
                 <h2 className='text-2xl font-bold'>
                     Create your <br />
                     PopX account
