@@ -21,7 +21,6 @@ function Login() {
     const { email, password } = formData;
 
     e.preventDefault();
-    console.log(email);
     setFormData({
       ...formData,
       email: email?.trim(),
