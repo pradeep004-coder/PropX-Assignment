@@ -47,7 +47,7 @@ function Signup() {
         if (phone.length < 10) return toast.warning("Invalid phone number!!")
         if (!agency) return toast.warning("Select are you agency, yes or not!!")
 
-        fetch("http://localhost:8444/api/signup", {
+        fetch("https://propx-assignment.onrender.com/api/signup", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ name, email, password })

@@ -35,7 +35,7 @@ function Login() {
     if (password.includes(" ")) return toast.warning("Password should not contain whitespace!!")
     if (password.length < 6) return toast.warning("Password must be atleast 6 characters long!!")
 
-    fetch("http://localhost:8444/api/login", {
+    fetch("https://propx-assignment.onrender.com/api/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password })
