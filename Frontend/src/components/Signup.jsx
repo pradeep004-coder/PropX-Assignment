@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
 import { userContext } from '../context/context';
@@ -31,21 +31,21 @@ function Signup() {
             name: name.trim(),
             email: email.trim(),
             password: password.trim()
-        })
+        });
 
-        if (!name) return toast.warning("Enter name!!")
-        if (!nameRegex.test(name)) return toast.warning("Invalid name!!")
-        if (name.length < 5) return toast.warning("Name must be atleast 5 characters long!!")
-        if (!email) return toast.warning("Enter email!!")
-        if (!emailRegex.test(email)) return toast.warning("Invalid email!!")
-        if (email.includes(" ")) return toast.warning("Email should not contain whitespace!!")
-        if (!password) return toast.warning("Enter password!!")
-        if (password.includes(" ")) return toast.warning("Password should not contain whitespace!!")
-        if (password.length < 6) return toast.warning("Password must be atleast 6 characters long!!")
-        if (!company) return toast.warning("Enter company!!")
-        if (!phone) return toast.warning("Enter phone number!!")
-        if (phone.length < 10) return toast.warning("Invalid phone number!!")
-        if (!agency) return toast.warning("Select are you agency, yes or not!!")
+        if (!name) return toast.warning("Enter name!!");
+        if (!nameRegex.test(name)) return toast.warning("Invalid name!!");
+        if (name.length < 5) return toast.warning("Name must be atleast 5 characters long!!");
+        if (!email) return toast.warning("Enter email!!");
+        if (!emailRegex.test(email)) return toast.warning("Invalid email!!");
+        if (email.includes(" ")) return toast.warning("Email should not contain whitespace!!");
+        if (!password) return toast.warning("Enter password!!");
+        if (password.includes(" ")) return toast.warning("Password should not contain whitespace!!");
+        if (password.length < 6) return toast.warning("Password must be atleast 6 characters long!!");
+        if (!company) return toast.warning("Enter company!!");
+        if (!phone) return toast.warning("Enter phone number!!");
+        if (phone.length < 10) return toast.warning("Invalid phone number!!");
+        if (!agency) return toast.warning("Select are you agency, yes or not!!");
 
         fetch("https://propx-assignment.onrender.com/api/signup", {
             method: "POST",
@@ -73,8 +73,6 @@ function Signup() {
                 }, 500);
             })
             .catch(err => console.error(err));
-
-
     }
 
 
