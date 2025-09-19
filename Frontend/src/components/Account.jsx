@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-import { userContext } from '../context/context'
+import { useContext } from 'react';
+import { userContext } from '../context/context';
 
 function Account() {
 
@@ -10,7 +10,7 @@ function Account() {
             <div className='h-full w-full md:w-sm flex flex-col'>
                 <h2 className='bg-white p-4'>Account Settings</h2>
                 <div className=" flex-grow bg-zinc-100 shadow-md flex flex-col gap-2">
-                    {/* Profile */}
+                    {/* Profile Container*/}
                     <div className='h-fit px-4 pb-4 border-b border-dashed'>
                         <div className="flex gap-4 mt-4">
                             <div className="profile-image">
@@ -28,10 +28,11 @@ function Account() {
                             Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam
                         </p>
                     </div>
+
                 </div>
             </div>
         </div>
     )
 }
 
-export default Account
+export default Account;

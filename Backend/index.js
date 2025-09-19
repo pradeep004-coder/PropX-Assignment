@@ -9,11 +9,11 @@ const app = express();
 const Port = process.env.PORT || 8444;
 
 app.use(express.json()); // to parse JSON request bodies
-app.use(express.urlencoded({ extended: true })); // if you're sending form data
+app.use(express.urlencoded({ extended: true })); // if sending form data
 app.use(cors());
 
 connectDB();
 
 app.use("/", router);
 
-app.listen(Port, () => console.log(`Example app listening on Port ${Port}!`))
+app.listen(Port);
