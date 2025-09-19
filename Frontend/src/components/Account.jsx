@@ -13,7 +13,7 @@ function Account() {
              toast.error("Please login or signup!");
              setTimeout(() => {
                 navigate("/");
-             }, 2000);
+             }, 3700);
         }
     }, [userData]);
 
