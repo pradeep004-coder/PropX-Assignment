@@ -7,7 +7,7 @@ function Account() {
     const { userData } = useContext(userContext);
 
     useEffect(() => {
-        if (!userData.name || !userData.email) return toast.error("Please login or signup!")
+        if (!userData.name || !userData.email) return toast.error("Please login or signup!");
     }, []);
 
     return (
