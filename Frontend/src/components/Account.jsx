@@ -1,9 +1,14 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { userContext } from '../context/context';
+import { toast } from 'react-toastify';
 
 function Account() {
 
     const { userData } = useContext(userContext);
+
+    useEffect(() => {
+        if (!userData.name || !userData.email) return toast.error("Please login or signup!")
+    }, []);
 
     return (
         <div className='h-screen w-full flex justify-center'>
@@ -20,8 +25,8 @@ function Account() {
                                 </div>
                             </div>
                             <div className="profile-info" >
-                                <h3 className='font-bold'>{userData.name}</h3>
-                                <p>{userData.email}</p>
+                                <h3 className='font-bold'>{userData.name || "Name"}</h3>
+                                <p>{userData.email || "email@domain.com"}</p>
                             </div>
                         </div>
                         <p >
