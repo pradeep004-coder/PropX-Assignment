@@ -8,8 +8,8 @@ dotenv.config();
 const app = express();
 const Port = process.env.PORT || 8444;
 
-app.use(express.json()); // to parse JSON request bodies
-app.use(express.urlencoded({ extended: true })); // if sending form data
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 connectDB();
